@@ -20,7 +20,7 @@ function! airline#extensions#alpaca_tags#status()
   "if (!get(g:, 'alpaca_tags#disable', 1) || g:alpaca_tags#disable == 1)
   "    return ''
   "endif
-  let processes = alpaca_tags#process_manager#status()
+  let processes = alpaca_tags#process_manager#all()
   let status_str = ''
   let i = 0
   for [path, process] in items(processes)
